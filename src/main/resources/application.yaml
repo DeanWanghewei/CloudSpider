@@ -1,41 +1,4 @@
 #配置文件环境配置 ： 号后一定要加个空格
-spring:
-  #jackson
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: Asia/Chongqing
-  # mysql
-  datasource:
-    url:
-    username:
-    password:
-    driver-class-name: com.mysql.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
-#jpa配置
-  jpa:
-    database: mysql
-    database-platform: org.hibernate.dialect.MySQL5Dialect
-    show-sql: true
-    hibernate:
-      ddl-auto: update
----
-# web 的jetty配置
-spring:
-  profiles: web
 server:
-  port: 9999
-  contextPath: /web/search/common
-  max-threads: 150
-  min-threads: 20
-
-
----
-# analysis 的jetty配置
-spring:
-  profiles: analysis
-server:
-  port: 8888
-  contextPath: /search/common
-  max-threads: 150
-  min-threads: 20
-
+  port: 8099
+  context-path: /spider
